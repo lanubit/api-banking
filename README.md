@@ -36,6 +36,14 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Deploy
+
+```bash
+# main deploy, project is deployed when commit to main branch
+# For the deployment it is used: Github, Git Actions and Heroku
+$ git push origin main
+```
+
 ## Developer
 
 - Author - Moisés Tiburcio

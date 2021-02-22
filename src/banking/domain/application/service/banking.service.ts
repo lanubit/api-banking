@@ -8,7 +8,7 @@ import { GetCurrencyDto } from '../../dto/get-currency.dto';
 export class BankingService {
   constructor(
     private readonly atmService: AtmService,
-    private readonly currencyService: CurrencyService
+    private readonly currencyService: CurrencyService,
   ) {}
 
   async getBanking(atmDto: GetAtmDto, currencyDto: GetCurrencyDto) {
@@ -16,7 +16,7 @@ export class BankingService {
     const currencyResult = await this.currencyService.getCurrency(currencyDto);
     return {
       currency: currencyResult,
-      atm: atmResult
+      atm: atmResult,
     };
   }
 }

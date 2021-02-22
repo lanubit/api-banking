@@ -5,9 +5,13 @@ import { CurrencyServiceRepository } from '../../infrastructure/repository/servi
 @Injectable()
 export class CurrencyModel {
   constructor(
-    private readonly currencyServiceRepository: CurrencyServiceRepository
+    private readonly currencyServiceRepository: CurrencyServiceRepository,
   ) {}
-  async getCurrency(from: string, to: string, amount: number): Promise<CurrencyEntity> {
+  async getCurrency(
+    from: string,
+    to: string,
+    amount: number,
+  ): Promise<CurrencyEntity> {
     return this.currencyServiceRepository.exchangeRate(from, to, amount);
   }
 }

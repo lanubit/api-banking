@@ -4,11 +4,13 @@ import { AtmServiceRepository } from '../../infrastructure/repository/service/at
 
 @Injectable()
 export class AtmModel {
-  constructor(
-    private readonly atmServiceRepository: AtmServiceRepository
-  ) {}
+  constructor(private readonly atmServiceRepository: AtmServiceRepository) {}
 
-  async searchAtmNear(lat: string, lon: string, accuracy: number): Promise<AtmEntity[]> {
+  async searchAtmNear(
+    lat: string,
+    lon: string,
+    accuracy: number,
+  ): Promise<AtmEntity[]> {
     return await this.atmServiceRepository.searchAtmNear(lat, lon, accuracy);
   }
 }

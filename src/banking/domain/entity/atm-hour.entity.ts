@@ -1,4 +1,4 @@
 export interface AtmHourEntity {
-  hourFrom: string,
-  hourTo: string,
+  hourFrom: string;
+  hourTo: string;
 }

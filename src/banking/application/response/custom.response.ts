@@ -2,11 +2,8 @@ export class CustomResponse {
   message: string;
   data: any;
 
-  constructor(
-    message,
-    data
-  ) {
+  constructor(message, data) {
     this.message = message;
-    this.data = data
+    this.data = data;
   }
 }
